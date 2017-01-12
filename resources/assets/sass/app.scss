@@ -1,0 +1,299 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+body {
+  background: #f5f8fa;
+}
+
+.breadcrumb {
+  padding: 10px;
+  margin-bottom: 0;
+  background: none;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  padding-left: 15px;
+}
+// The bar at the top of the page.
+.navbar-top {
+  margin: 0;
+  border-radius: 0;
+  background: #FFF;
+  padding-right: 0;
+  box-shadow: 0 0 0.5rem rgba(83, 78, 76, 0.5);
+  a {
+    background: none !important;
+
+    &:hover {
+      color: #0F0 !important;
+    }
+  }
+  border: 0;
+}
+
+#loginBackground {
+  background-image: url("../images/stocks-login.jpg");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 20px;
+  background: white;
+  margin-bottom: -1px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  margin-top: 0;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+
+  .right {
+    font-size: 16px;
+    float: right;
+    padding: 3px;
+  }
+}
+// Login page
+#login {
+  box-shadow: #000 0px 0px 3px;
+  background: #FFF;
+  .header {
+    margin-left: 0;
+    background: #115A96;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  form {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 500px;
+  }
+}
+// Center login.
+.centre {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+// The search field container.
+.ui-autocomplete-container {
+  @extend .navbar-top;
+  overflow: hidden;
+  height: 38px;
+  margin-bottom: 0 !important;
+  border: 0;
+  box-shadow: 0 0 0.5rem rgba(83, 78, 76, 0.5);
+  padding-top: 6px;
+  line-height: 25px;
+}
+// The search field.
+.ui-autocomplete {
+  position: relative !important;
+  width: 100% !important;
+  display: table !important;
+  background: none !important;
+  border: none !important;
+  left: 0 !important;
+  top: 0 !important;
+  li {
+    display: inline;
+  }
+}
+// The search field.
+.ui-state-focus {
+  background: none !important;
+  border: 0 !important;
+  font-weight: normal !important;
+  color: #00AA00 !important;
+  margin: 0 !important;
+}
+// News headlines.
+.headlines, #news {
+  list-style: none;
+  padding: 0;
+}
+// The stock graph on the stock page.
+#symbolImage {
+  width: 100%;
+  -webkit-clip-path: inset(28px 0px 0px 3px);
+  clip-path: inset(28px 0px 0px 3px);
+  margin-top: -28px;
+  margin-left: -3px;
+}
+// The container of the stock graph on the stock page.
+#symbolImageContainer {
+  border-left: 1px solid #DDD;
+  border-right: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 20px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: #FFF;
+}
+// The stock price, including the change in price on the stock page.
+#price, #change, #changeP {
+  display: inline-block;
+  margin-top: 0;
+}
+// The price of the stock on the stock page.
+#price {
+  margin-left: -5px;
+}
+
+h2 {
+  font-size: 28px;
+}
+// The white box.
+.box {
+  background: #FFF;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  padding: 10px 10px 0 10px;
+  width: 100%; // For text areas
+}
+// A white box section.
+.box-section {
+  margin-bottom: -6px;
+  border-radius: 0;
+}
+// The ticker strip on the home page.
+.marquee {
+  background: #000;
+  color: white;
+  background-size: contain;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 3px;
+  a {
+    color: #FFF;
+    &:hover {
+      color: #FFF;
+    }
+  }
+}
+// User menu on the top bar.
+#menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: 50px;
+  width: 136px;
+}
+
+#profileAvatar {
+  width: 100%;
+}
+// Remove border from the bottom of the white boxes.
+.box-open {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+// Remove bottom styling of white boxes.
+.box-down {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+// The loading page.
+#loading {
+  text-align: center;
+  font-size: 50px;
+  width: 100%;
+  padding: 50px;
+  display: none;
+}
+// Hide the stock page by default so we can load it when it's ready.
+#stock {
+  display: none;
+}
+// The price field in the bought stock section of the stock page.
+.compare {
+  min-width: 100px;
+}
+// The box that surrounds the user's avatar on a profile.
+#userBox {
+  a {
+    padding: 0;
+  }
+}
+
+.usersAvatar {
+  width: 65px;
+  img {
+    width: 60px;
+  }
+}
+// Recently bought and sold stock on the profile page.
+.box-table {
+  padding: 0;
+  table {
+    margin-bottom: 0;
+  }
+}
+// Edit link on the profile page
+.edit {
+  position: absolute;
+  top: -28px;
+  right: 18px;
+}
+// Annoucment formatting
+.panel-heading .pager {
+  margin: 0;
+}
+.eotm {
+  max-width: 150px;
+  margin-right: 10px;
+  float: left;
+}
+// So it looks more like a link
+.btn-link {
+  padding: 0;
+}
+// The header bar logo
+#logo {
+  height: 30px;
+  display: inline;
+  margin-right: 10px;
+}
+// Format news links
+.link {
+  width: 100%;
+  // Make the news links look good on a mobile
+  @media (max-width: $screen-xs-max) {
+    display: block;
+  }
+}
+// Format the news articles
+.date {
+  white-space:nowrap;
+  text-align: right;
+  // Make the news look dates good on a mobile.
+  @media (max-width: $screen-xs-max) {
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
+// Display 404 and 403 doge in the middle of the page.
+.doge {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
